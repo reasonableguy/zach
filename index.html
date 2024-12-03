@@ -26,7 +26,7 @@
 }
 
 .gallery-item img {
-  max-width: 100%;
+  max-width: 100vw; /* Ensure images fill the viewport width */
   max-height: 100%;
   object-fit: cover;
 }
@@ -38,7 +38,7 @@
 }
 
 .chevron {
-  position: fixed;
+  position: fixed; /* Keeps the chevron fixed at the bottom of the viewport */
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
@@ -54,8 +54,7 @@
   background-color: rgba(200, 200, 200, 0.9);
 }
 
-</style>
-  <head>
+</style><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery with Scroll</title>
@@ -64,13 +63,13 @@
 <body>
   <div class="gallery">
     <div class="gallery-item">
-      <img src="https://posterjack.ca/cdn/shop/articles/landscape_photography_tips_featured_image.jpg?v=1563408049&width=2048" alt="Image 1">
+      <img src="image1.jpg" alt="Image 1">
     </div>
     <div class="gallery-item">
       <p>Text content or description here.</p>
     </div>
     <div class="gallery-item">
-      <img src="https://posterjack.ca/cdn/shop/articles/landscape_photography_tips_featured_image.jpg?v=1563408049&width=2048" alt="Image 2">
+      <img src="image2.jpg" alt="Image 2">
     </div>
     <div class="gallery-item">
       <p>Another text item or different content.</p>

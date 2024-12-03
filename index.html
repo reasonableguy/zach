@@ -65,7 +65,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="gallery">
+  <div class="gallery" onscroll="checkScrollPosition()">
     <div class="gallery-item">
       <img src="/boys%20cards%20z1.jpg" alt="Image 1">
     </div>
@@ -100,6 +100,19 @@
         top: currentScroll + viewportHeight,
         behavior: 'smooth'
       });
+    }
+
+    function checkScrollPosition() {
+      const gallery = document.querySelector('.gallery');
+      const chevron = document.getElementById('chevron');
+      const totalScroll = gallery.scrollHeight - gallery.clientHeight; // Total scrollable height
+      const currentScroll = gallery.scrollTop;
+
+      if (currentScroll >= totalScroll - 1) { // User is at the bottom
+        chevron.style.display = 'none';
+      } else {
+        chevron.style.display = 'block';
+      }
     }
   </script>
 </body>

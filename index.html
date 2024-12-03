@@ -1,1 +1,40 @@
-<div><p>hi</p></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery with Scroll</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="https://posterjack.ca/cdn/shop/articles/landscape_photography_tips_featured_image.jpg?v=1563408049&width=2048" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <p>Text content or description here.</p>
+    </div>
+    <div class="gallery-item">
+      <img src="https://posterjack.ca/cdn/shop/articles/landscape_photography_tips_featured_image.jpg?v=1563408049&width=2048" alt="Image 2">
+    </div>
+    <div class="gallery-item">
+      <p>Another text item or different content.</p>
+    </div>
+  </div>
+  <div class="chevron" onclick="scrollToNext()">
+    &#x25BC; <!-- Down chevron symbol -->
+  </div>
+
+  <script>
+    function scrollToNext() {
+      const gallery = document.querySelector('.gallery');
+      const currentScroll = gallery.scrollTop;
+      const viewportHeight = window.innerHeight;
+      gallery.scrollTo({
+        top: currentScroll + viewportHeight,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+</html>

@@ -58,10 +58,14 @@
   background-color: rgba(200, 200, 200, 0.9);
 }
 
-</style><head>
+</style>
+  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery with Scroll</title>
+  <title>ZACH</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -70,10 +74,10 @@
       <img src="/boys%20cards%20z1.jpg" alt="Image 1">
     </div>
     <div class="gallery-item">
-      <p>We were all set to mail these cards to you, but then the Canadian Postal Workers went on strike. (Fuckers!)</p>
+ <p>We were all set to mail these cards to you, but then the Canadian Postal Workers went on strike. (Fuckers!)</p>
       <p>So you'll have to make to with photos instead.</p>
     </div>
-    <div class="gallery-item">
+<div class="gallery-item">
       <img src="/boys%20cards%20z2.jpg" alt="Image 2">
     </div>
       <div class="gallery-item">
@@ -87,11 +91,13 @@
           <p style="margin-top:-200px;">And here's a picture of the money we were going to send you.</p>
     </div>
   </div>
-  <div class="chevron" onclick="scrollToNext()">
+  <div class="chevron" id="chevron" onclick="scrollToNext()">
     &#x25BC; <!-- Down chevron symbol -->
   </div>
-
-  <script>
+  
+  
+  
+ <script>
     function scrollToNext() {
       const gallery = document.querySelector('.gallery');
       const currentScroll = gallery.scrollTop;
